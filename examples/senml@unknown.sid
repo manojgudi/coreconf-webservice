@@ -1,0 +1,144 @@
+{
+  "assignment-range": [
+    {
+      "entry-point": 60000,
+      "size": 100
+    }
+  ],
+  "module-name": "senml",
+  "module-revision": "unknown",
+  "item": [
+    {
+      "namespace": "module",
+      "identifier": "senml",
+      "status": "unstable",
+      "sid": 60000
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e",
+      "status": "unstable",
+      "sid": 60001
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/bn",
+      "status": "unstable",
+      "sid": 60002,
+      "type": "string"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/bs",
+      "status": "unstable",
+      "sid": 60003,
+      "type": "integer"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/bt",
+      "status": "unstable",
+      "sid": 60004,
+      "type": "uint64"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/bu",
+      "status": "unstable",
+      "sid": 60005,
+      "type": "string"
+    },
+     {
+      "namespace": "identifier",
+      "identifier": "temperature",
+      "status": "unstable",
+      "sid": 60017,
+      "type": "string"
+    },
+    {
+      "namespace": "identifier",
+      "identifier": "Cel",
+      "status": "unstable",
+      "sid": 60018,
+      "type": "string"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/bv",
+      "status": "unstable",
+      "sid": 60006,
+      "type": "integer"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/bver",
+      "status": "unstable",
+      "sid": 60007,
+      "type": "uinteger"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/n",
+      "status": "unstable",
+      "sid": 60008,
+      "type": "string"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/s",
+      "status": "unstable",
+      "sid": 60009,
+      "type": "integer"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/t",
+      "status": "unstable",
+      "sid": 60010,
+      "type": "uinteger"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/u",
+      "status": "unstable",
+      "sid": 60011,
+      "type": "string"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/ut",
+      "status": "unstable",
+      "sid": 60012,
+      "type": "uinteger"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/v",
+      "status": "unstable",
+      "sid": 60013,
+      "type": "string"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/vb",
+      "status": "unstable",
+      "sid": 60014,
+      "type": "boolean"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/vd",
+      "status": "unstable",
+      "sid": 60015,
+      "type": "string"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/senml:e/vs",
+      "status": "unstable",
+      "sid": 60016,
+      "type": "string"
+    }
+  ],
+  "key-mapping": {}
+}

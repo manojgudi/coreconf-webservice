@@ -8,6 +8,9 @@ import cbor2
 
 app = Flask(__name__)
 
+senmlSIDFile = "examples/senml@unknown.sid"
+senmlDataFile = "examples/senml_data.json"
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     outputText = ""
@@ -48,7 +51,7 @@ def index():
         try:
             ccm = pycoreconf.CORECONFModel(sidFileName, model_description_file=None)
             coreconfByteString = (ccm.toCORECONF(dataFileName))
-            outputText = pprint.pformat(cbor2.loads(coreconfByteString))
+            outputText = pprint.pformat(cbor2.loads(coreconfByteString), width=40)
             hexText = coreconfByteString.hex()
         except:
             errMessage = "Error: CORECONF conversion failed."
@@ -64,6 +67,23 @@ def index():
     
     # If it's a GET request (e.g., page refresh), render with empty outputText
     return render_template('index.html')
+
+@app.route('/example', methods=['GET'])
+def example():
+    # Read the example files and return the content as sid_text_raw and data_text_raw
+   
+    sidTextRaw = "wha"
+    dataTextRaw= "wha"
+
+    with open(senmlSIDFile, 'r') as f:
+        sidTextRaw = f.read()
+    with open(senmlDataFile, 'r') as f:
+        dataTextRaw = f.read()
+
+    print("HERE")
+    print(sidTextRaw, dataTextRaw)
+    return render_template('index.html', sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
