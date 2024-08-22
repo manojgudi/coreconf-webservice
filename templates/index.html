@@ -12,55 +12,75 @@
 
     <style>
         /* Custom CSS for CBOR-like highlighting */
-        .highlight .string { color: #d14; }
-        .highlight .number { color: #099; }
-        .highlight .boolean { color: #d14; }
-        .highlight .null { color: #999; }
-        .highlight .key { color: #905; }
+        .highlight .string {
+            color: #d14;
+        }
 
+        .highlight .number {
+            color: #099;
+        }
+
+        .highlight .boolean {
+            color: #d14;
+        }
+
+        .highlight .null {
+            color: #999;
+        }
+
+        .highlight .key {
+            color: #905;
+        }
     </style>
 
 
 </head>
 
 <body>
+
     <div class="container">
-        <h1>CORECONF Transformer</h1>
+        <header>
+            <h1>Transform To CORECONF</h1>
+        </header>
         <form method="POST" action="{{ url_for('index') }}">
             <div class="input-container">
-                <textarea name="input1" placeholder="Paste your SID here.." class="input-box">{{sid_text_raw}}</textarea>
-                <textarea name="input2" placeholder="Paste your Data instance here.." class="input-box">{{data_text_raw}}</textarea>
+                <textarea name="input1" placeholder="Paste your SID here.."
+                    class="input-box">{{sid_text_raw}}</textarea>
+                <textarea name="input2" placeholder="Paste your Data instance here.."
+                    class="input-box">{{data_text_raw}}</textarea>
             </div>
             <button type="submit" class="submit-btn">Transform</button>
         </form>
-        <a  href="{{ url_for('example') }}"><p class="example-text"> SenML Example</p></a>
+        <a href="{{ url_for('example') }}">
+            <p class="example-text"> SenML Example</p>
+        </a>
 
 
         {% if output_text %}
         <div class="result">
             <h2>CORECONF representation:</h2>
-            <pre id="json-result">{{ output_text }}</pre>
+            <pre id="cbor-result"><code class="highlight">{{ output_text|safe }}</code></pre>
         </div>
 
-           <script>
-               // Highlight JSON syntax
-               // Convert JSON-like data to CBOR-like highlighting
-               document.addEventListener('DOMContentLoaded', (event) => {
-                    const codeElement = document.querySelector('#cbor-result code');
-                    let text = codeElement.textContent;
+        <script>
+            // Highlight JSON syntax
+            // Convert JSON-like data to CBOR-like highlighting
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const codeElement = document.querySelector('#cbor-result code');
+                let text = codeElement.textContent;
 
-                    // Simple regex-based highlighting
-                    text = text
-                        .replace(/(".*?")/g, '<span class="string">$1</span>') // Highlight strings
-                        .replace(/(\b\d+\b)/g, '<span class="number">$1</span>') // Highlight numbers
-                        .replace(/\b(true|false)\b/g, '<span class="boolean">$1</span>') // Highlight booleans
-                        .replace(/\b(null)\b/g, '<span class="null">$1</span>'); // Highlight null values
+                // Simple regex-based highlighting
+                text = text
+                    .replace(/('.*?')/g, '<span class="string">$1</span>') // Highlight strings
+                    .replace(/(\b\d+\b)/g, '<span class="number">$1</span>') // Highlight numbers
+                    .replace(/\b(true|false)\b/g, '<span class="boolean">$1</span>') // Highlight booleans
+                    .replace(/\b(null)\b/g, '<span class="null">$1</span>'); // Highlight null values
 
-                    codeElement.innerHTML = text;
-                });
-               // Scroll the result into view after submission
-               document.querySelector('.result').scrollIntoView({ behavior: 'smooth' });
-           </script>
+                codeElement.innerHTML = text;
+            });
+            // Scroll the result into view after submission
+            document.querySelector('.result').scrollIntoView({ behavior: 'smooth' });
+        </script>
         {% endif %}
 
         {%if hex_text %}
@@ -68,16 +88,17 @@
             <h2>Hex code:</h2>
             <pre id="json-result">{{ hex_text }}</pre>
         </div>
-        <p>Hex Length: {{hex_length}}</p>
+        <p align="left"><b>Hex Length: {{hex_length}} bytes</b></p>
         {% endif %}
         <br><br><br>
         <footer>
-            <p>Powered using <a href="https://github.com/alex-fddz/pycoreconf" target="_blank">pycoreconf</a> | <a href="https://core-wg.github.io/comi/draft-ietf-core-comi.html" target="_blank">What is CORECONF?</a> | <a href="https://id.linkedin.com/in/manoj-gudi" target="_blank">© Manoj Gudi</a></p>
+            <p>Powered using <a href="https://github.com/alex-fddz/pycoreconf" target="_blank">pycoreconf</a> | <a
+                    href="https://core-wg.github.io/comi/draft-ietf-core-comi.html" target="_blank">What is
+                    CORECONF?</a> | <a href="https://id.linkedin.com/in/manoj-gudi" target="_blank">© Manoj Gudi</a></p>
         </footer>
-        
+
     </div>
-    
+
 
 </body>
-
 </html>
