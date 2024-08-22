@@ -1,0 +1,507 @@
+{
+  "assignment-range": [
+    {
+      "entry-point": 60000,
+      "size": 100
+    }
+  ],
+  "module-name": "cam",
+  "module-revision": "unknown",
+  "item": [
+    {
+      "namespace": "module",
+      "identifier": "cam",
+      "status": "unstable",
+      "sid": 60000
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam",
+      "status": "unstable",
+      "sid": 60001
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters",
+      "status": "unstable",
+      "sid": 60002
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer",
+      "status": "unstable",
+      "sid": 60003
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition",
+      "status": "unstable",
+      "sid": 60004
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/altitude",
+      "status": "unstable",
+      "sid": 60005
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/altitude/altitudeConfidence",
+      "status": "unstable",
+      "sid": 60006,
+      "type": {
+        "0": "alt-000-01",
+        "1": "alt-000-02",
+        "2": "alt-000-05",
+        "3": "alt-000-10",
+        "4": "alt-000-20",
+        "5": "alt-000-50",
+        "6": "alt-001-00",
+        "7": "alt-002-00",
+        "8": "alt-005-00",
+        "9": "alt-010-00",
+        "10": "alt-020-00",
+        "11": "alt-050-00",
+        "12": "alt-100-00",
+        "13": "alt-200-00",
+        "14": "outOfRange",
+        "15": "unavailable"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/altitude/altitudeValue",
+      "status": "unstable",
+      "sid": 60007,
+      "type": "AltitudeValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/latitude",
+      "status": "unstable",
+      "sid": 60008,
+      "type": "Latitude"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/longitude",
+      "status": "unstable",
+      "sid": 60009,
+      "type": "Longitude"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/positionConfidenceEllipse",
+      "status": "unstable",
+      "sid": 60010
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/positionConfidenceEllipse/semiMajorConfidence",
+      "status": "unstable",
+      "sid": 60011,
+      "type": "SemiAxisLength"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/positionConfidenceEllipse/semiMajorOrientation",
+      "status": "unstable",
+      "sid": 60012,
+      "type": "HeadingValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/referencePosition/positionConfidenceEllipse/semiMinorConfidence",
+      "status": "unstable",
+      "sid": 60013,
+      "type": "SemiAxisLength"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/basicContainer/stationType",
+      "status": "unstable",
+      "sid": 60014,
+      "type": "TrafficParticipantType"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer",
+      "status": "unstable",
+      "sid": 60015
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency",
+      "status": "unstable",
+      "sid": 60016
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/accelerationControl",
+      "status": "unstable",
+      "sid": 60017,
+      "type": "AccelerationControl"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/curvature",
+      "status": "unstable",
+      "sid": 60018
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/curvature/curvatureConfidence",
+      "status": "unstable",
+      "sid": 60019,
+      "type": {
+        "0": "onePerMeter-0-00002",
+        "1": "onePerMeter-0-0001",
+        "2": "onePerMeter-0-0005",
+        "3": "onePerMeter-0-002",
+        "4": "onePerMeter-0-01",
+        "5": "onePerMeter-0-1",
+        "6": "outOfRange",
+        "7": "unavailable"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/curvature/curvatureValue",
+      "status": "unstable",
+      "sid": 60020,
+      "type": "CurvatureValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/curvatureCalculationMode",
+      "status": "unstable",
+      "sid": 60021,
+      "type": {
+        "0": "yawRateUsed",
+        "1": "yawRateNotUsed",
+        "2": "unavailable"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/driveDirection",
+      "status": "unstable",
+      "sid": 60022,
+      "type": {
+        "0": "forward",
+        "1": "backward",
+        "2": "unavailable"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/heading",
+      "status": "unstable",
+      "sid": 60023
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/heading/headingConfidence",
+      "status": "unstable",
+      "sid": 60024,
+      "type": {
+        "1": "equalOrWithinZeroPointOneDegree",
+        "10": "equalOrWithinOneDegree",
+        "126": "outOfRange",
+        "127": "unavailable"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/heading/headingValue",
+      "status": "unstable",
+      "sid": 60025,
+      "type": "HeadingValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/longitudinalAcceleration",
+      "status": "unstable",
+      "sid": 60026
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/longitudinalAcceleration/longitudinalAccelerationConfidence",
+      "status": "unstable",
+      "sid": 60027,
+      "type": "AccelerationConfidence"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/longitudinalAcceleration/longitudinalAccelerationValue",
+      "status": "unstable",
+      "sid": 60028,
+      "type": "LongitudinalAccelerationValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/speed",
+      "status": "unstable",
+      "sid": 60029
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/speed/speedConfidence",
+      "status": "unstable",
+      "sid": 60030,
+      "type": "SpeedConfidence"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/speed/speedValue",
+      "status": "unstable",
+      "sid": 60031,
+      "type": "SpeedValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/vehicleLength",
+      "status": "unstable",
+      "sid": 60032
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/vehicleLength/vehicleLengthConfidenceIndication",
+      "status": "unstable",
+      "sid": 60033,
+      "type": {
+        "0": "noTrailerPresent",
+        "1": "trailerPresentWithKnownLength",
+        "2": "trailerPresentWithUnknownLength",
+        "3": "trailerPresenceIsUnknown",
+        "4": "unavailable"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/vehicleLength/vehicleLengthValue",
+      "status": "unstable",
+      "sid": 60034,
+      "type": "VehicleLengthValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/vehicleWidth",
+      "status": "unstable",
+      "sid": 60035,
+      "type": "VehicleWidth"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/yawRate",
+      "status": "unstable",
+      "sid": 60036
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/yawRate/yawRateConfidence",
+      "status": "unstable",
+      "sid": 60037,
+      "type": {
+        "0": "degSec-000-01",
+        "1": "degSec-000-05",
+        "2": "degSec-000-10",
+        "3": "degSec-001-00",
+        "4": "degSec-005-00",
+        "5": "degSec-010-00",
+        "6": "degSec-100-00",
+        "7": "outOfRange",
+        "8": "unavailable"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/yawRate/yawRateValue",
+      "status": "unstable",
+      "sid": 60038,
+      "type": "YawRateValue"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency",
+      "status": "unstable",
+      "sid": 60039
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency/protectedCommunicationZonesRsu",
+      "status": "unstable",
+      "sid": 60040
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency/protectedCommunicationZonesRsu/expiryTime",
+      "status": "unstable",
+      "sid": 60041,
+      "type": "TimestampIts"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency/protectedCommunicationZonesRsu/protectedZoneId",
+      "status": "unstable",
+      "sid": 60042,
+      "type": "ProtectedZoneId"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency/protectedCommunicationZonesRsu/protectedZoneLatitude",
+      "status": "unstable",
+      "sid": 60043,
+      "type": "Latitude"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency/protectedCommunicationZonesRsu/protectedZoneLongitude",
+      "status": "unstable",
+      "sid": 60044,
+      "type": "Longitude"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency/protectedCommunicationZonesRsu/protectedZoneRadius",
+      "status": "unstable",
+      "sid": 60045,
+      "type": "ProtectedZoneRadius"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/highFrequencyContainer/rsuContainerHighFrequency/protectedCommunicationZonesRsu/protectedZoneType",
+      "status": "unstable",
+      "sid": 60046,
+      "type": {
+        "0": "permanentCenDsrcTolling",
+        "1": "temporaryCenDsrcTolling"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer",
+      "status": "unstable",
+      "sid": 60047
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency",
+      "status": "unstable",
+      "sid": 60048
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/exteriorLights",
+      "status": "unstable",
+      "sid": 60049,
+      "type": "ExteriorLights"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/pathHistory",
+      "status": "unstable",
+      "sid": 60050
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/pathHistory/pathDeltaTime",
+      "status": "unstable",
+      "sid": 60051,
+      "type": "PathDeltaTime"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/pathHistory/pathPosition",
+      "status": "unstable",
+      "sid": 60052
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/pathHistory/pathPosition/deltaAltitude",
+      "status": "unstable",
+      "sid": 60053,
+      "type": "DeltaAltitude"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/pathHistory/pathPosition/deltaLatitude",
+      "status": "unstable",
+      "sid": 60054,
+      "type": "DeltaLatitude"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/pathHistory/pathPosition/deltaLongitude",
+      "status": "unstable",
+      "sid": 60055,
+      "type": "DeltaLongitude"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/camParameters/lowFrequencyContainer/basicVehicleContainerLowFrequency/vehicleRole",
+      "status": "unstable",
+      "sid": 60056,
+      "type": {
+        "0": "default",
+        "1": "publicTransport",
+        "2": "specialTransport",
+        "3": "dangerousGoods",
+        "4": "roadWork",
+        "5": "rescue",
+        "6": "emergency",
+        "7": "safetyCar",
+        "8": "agriculture",
+        "9": "commercial",
+        "10": "military",
+        "11": "roadOperator",
+        "12": "taxi",
+        "13": "reserved1",
+        "14": "reserved2",
+        "15": "reserved3"
+      }
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:cam/generationDeltaTime",
+      "status": "unstable",
+      "sid": 60057,
+      "type": "GenerationDeltaTime"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:header",
+      "status": "unstable",
+      "sid": 60058
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:header/messageID",
+      "status": "unstable",
+      "sid": 60059,
+      "type": "MessageId"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:header/protocolVersion",
+      "status": "unstable",
+      "sid": 60060,
+      "type": "OrdinalNumber1B"
+    },
+    {
+      "namespace": "data",
+      "identifier": "/cam:header/stationID",
+      "status": "unstable",
+      "sid": 60061,
+      "type": "StationId"
+    }
+  ],
+  "key-mapping": {
+    "60040": [
+      60041
+    ],
+    "60050": [
+      60051
+    ]
+  }
+}

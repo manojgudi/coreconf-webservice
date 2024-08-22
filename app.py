@@ -10,6 +10,8 @@ app = Flask(__name__)
 
 senmlSIDFile = "examples/senml@unknown.sid"
 senmlDataFile = "examples/senml_data.json"
+camSIDFile = "examples/cam@unknown.sid"
+camDataFile = "examples/cam_yogoko_message.json"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -68,22 +70,33 @@ def index():
     # If it's a GET request (e.g., page refresh), render with empty outputText
     return render_template('index.html')
 
-@app.route('/example', methods=['GET'])
-def example():
+@app.route('/senml_example', methods=['GET'])
+def senmlExample():
     # Read the example files and return the content as sid_text_raw and data_text_raw
    
-    sidTextRaw = "wha"
-    dataTextRaw= "wha"
+    sidTextRaw = "Unable to read SID file."
+    dataTextRaw= "Unable to read SenML Data file."
 
     with open(senmlSIDFile, 'r') as f:
         sidTextRaw = f.read()
     with open(senmlDataFile, 'r') as f:
         dataTextRaw = f.read()
 
-    print("HERE")
-    print(sidTextRaw, dataTextRaw)
     return render_template('index.html', sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw)
 
+@app.route('/cam_example', methods=['GET'])
+def camExample():
+    # Read the example files and return the content as sid_text_raw and data_text_raw
+   
+    camTextRaw = "Unable to read CAM file."
+    dataTextRaw= "Unable to read CAM Data file."
+
+    with open(camSIDFile, 'r') as f:
+        camTextRaw = f.read()
+    with open(camDataFile, 'r') as f:
+        dataTextRaw = f.read()
+
+    return render_template('index.html', sid_text_raw=camTextRaw, data_text_raw=dataTextRaw)
 
 if __name__ == '__main__':
     app.run(debug=True)
