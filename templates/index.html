@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform to CORECONF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+
+    <style>
+        /* Custom CSS for CBOR-like highlighting */
+        .highlight .string { color: #d14; }
+        .highlight .number { color: #099; }
+        .highlight .boolean { color: #d14; }
+        .highlight .null { color: #999; }
+        .highlight .key { color: #905; }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>CORECONF Transformer</h1>
+        <form method="POST" action="{{ url_for('index') }}">
+            <div class="input-container">
+                <textarea name="input1" placeholder="Paste your SID here.." class="input-box">{{sid_text_raw}}</textarea>
+                <textarea name="input2" placeholder="Paste your Data instance here.." class="input-box">{{data_text_raw}}</textarea>
+            </div>
+            <button type="submit" class="submit-btn">Transform</button>
+        </form>
+
+        {% if output_text %}
+        <div class="result">
+            <h2>CORECONF representation:</h2>
+            <pre id="json-result">{{ output_text }}</pre>
+        </div>
+
+           <script>
+               // Highlight JSON syntax
+               // Convert JSON-like data to CBOR-like highlighting
+               document.addEventListener('DOMContentLoaded', (event) => {
+                    const codeElement = document.querySelector('#cbor-result code');
+                    let text = codeElement.textContent;
+
+                    // Simple regex-based highlighting
+                    text = text
+                        .replace(/(".*?")/g, '<span class="string">$1</span>') // Highlight strings
+                        .replace(/(\b\d+\b)/g, '<span class="number">$1</span>') // Highlight numbers
+                        .replace(/\b(true|false)\b/g, '<span class="boolean">$1</span>') // Highlight booleans
+                        .replace(/\b(null)\b/g, '<span class="null">$1</span>'); // Highlight null values
+
+                    codeElement.innerHTML = text;
+                });
+               // Scroll the result into view after submission
+               document.querySelector('.result').scrollIntoView({ behavior: 'smooth' });
+           </script>
+        {% endif %}
+
+        {%if hex_text %}
+        <div class="result">
+            <h2>Hex code:</h2>
+            <pre id="json-result">{{ hex_text }}</pre>
+        </div>
+        <p>Hex Length: {{hex_length}}</p>
+        {% endif %}
+        <footer>
+            <p>Powered using <a href="https://github.com/alex-fddz/pycoreconf" target="_blank">pycoreconf</a> | <a href="https://core-wg.github.io/comi/draft-ietf-core-comi.html" target="_blank">What is CORECONF?</a> | <a href="https://id.linkedin.com/in/manoj-gudi" target="_blank">© Manoj Gudi</a></p>
+        </footer>
+    </div>
+
+    
+</body>
+
+</html>
