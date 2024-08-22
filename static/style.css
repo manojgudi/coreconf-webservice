@@ -33,6 +33,7 @@ form {
     display: flex;
     width: 100%;
     gap: 20px;
+    height: 580px;
     
 }
 
@@ -61,7 +62,7 @@ form {
 }
 
 .result {
-    margin-top: 40px;
+    margin-top: 50px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
