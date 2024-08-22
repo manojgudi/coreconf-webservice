@@ -65,7 +65,11 @@ def index():
         if errMessage:
             return render_template('index.html', output_text=errMessage)
 
-        return render_template('index.html', output_text=outputText, hex_text=hexText, json_length=len(json.dumps(dataJSON)), hex_length=int(len(hexText)/2), sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw)
+        jsonSize = len(json.dumps(dataJSON,  separators=(',', ':')))
+        hexSize  = len(hexText)/2
+        compressedPercent = round(100 - (hexSize/jsonSize)*100, 2)
+        return render_template('index.html', output_text=outputText, hex_text=hexText, json_length=jsonSize, hex_length=hexSize, 
+                               compressed_percent = compressedPercent, sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw)
     
     # If it's a GET request (e.g., page refresh), render with empty outputText
     return render_template('index.html')

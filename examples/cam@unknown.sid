@@ -2,7 +2,7 @@
   "assignment-range": [
     {
       "entry-point": 60000,
-      "size": 100
+      "size": 300
     }
   ],
   "module-name": "cam",
@@ -204,12 +204,7 @@
       "identifier": "/cam:cam/camParameters/highFrequencyContainer/basicVehicleContainerHighFrequency/heading/headingConfidence",
       "status": "unstable",
       "sid": 60024,
-      "type": {
-        "1": "equalOrWithinZeroPointOneDegree",
-        "10": "equalOrWithinOneDegree",
-        "126": "outOfRange",
-        "127": "unavailable"
-      }
+      "type": "HeadingConfidence"
     },
     {
       "namespace": "data",
