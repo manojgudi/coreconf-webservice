@@ -12,131 +12,117 @@
       "namespace": "module",
       "identifier": "senml",
       "status": "unstable",
-      "sid": 60000
+      "sid": 60010
     },
     {
       "namespace": "data",
       "identifier": "/senml:e",
       "status": "unstable",
-      "sid": 60001
+      "sid": 60000
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bn",
       "status": "unstable",
-      "sid": 60002,
+      "sid": 59998,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bs",
       "status": "unstable",
-      "sid": 60003,
-      "type": "integer"
+      "sid": 59994,
+      "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bt",
       "status": "unstable",
-      "sid": 60004,
-      "type": "uint64"
+      "sid": 59997,
+      "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bu",
       "status": "unstable",
-      "sid": 60005,
-      "type": "string"
-    },
-     {
-      "namespace": "identifier",
-      "identifier": "temperature",
-      "status": "unstable",
-      "sid": 60017,
-      "type": "string"
-    },
-    {
-      "namespace": "identifier",
-      "identifier": "Cel",
-      "status": "unstable",
-      "sid": 60018,
+      "sid": 59996,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bv",
       "status": "unstable",
-      "sid": 60006,
-      "type": "integer"
+      "sid": 59995,
+      "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bver",
       "status": "unstable",
-      "sid": 60007,
-      "type": "uinteger"
+      "sid": 59999,
+      "type": "Integer"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/n",
       "status": "unstable",
-      "sid": 60008,
+      "sid": 60000,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/s",
       "status": "unstable",
-      "sid": 60009,
-      "type": "integer"
+      "sid": 60005,
+      "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/t",
       "status": "unstable",
-      "sid": 60010,
-      "type": "uinteger"
+      "sid": 60006,
+      "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/u",
       "status": "unstable",
-      "sid": 60011,
+      "sid": 60001,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/ut",
       "status": "unstable",
-      "sid": 60012,
-      "type": "uinteger"
+      "sid": 60007,
+      "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/v",
       "status": "unstable",
-      "sid": 60013,
-      "type": "string"
+      "sid": 60002,
+      "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/vb",
       "status": "unstable",
-      "sid": 60014,
+      "sid": 60004,
       "type": "boolean"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/vd",
       "status": "unstable",
-      "sid": 60015,
+      "sid": 60008,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/vs",
       "status": "unstable",
-      "sid": 60016,
+      "sid": 60003,
       "type": "string"
     }
   ],
