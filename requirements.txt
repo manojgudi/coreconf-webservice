@@ -1,2 +1,3 @@
 gunicorn
-pycoreconf
+pycoreconf @ git+https://github.com/manojgudi/pycoreconf
+flask
