@@ -12,117 +12,117 @@
       "namespace": "module",
       "identifier": "senml",
       "status": "unstable",
-      "sid": 60010
+      "sid": 60016
     },
     {
       "namespace": "data",
       "identifier": "/senml:e",
       "status": "unstable",
-      "sid": 60000
+      "sid": 60006
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bn",
       "status": "unstable",
-      "sid": 59998,
+      "sid": 60004,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bs",
       "status": "unstable",
-      "sid": 59994,
+      "sid": 60000,
       "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bt",
       "status": "unstable",
-      "sid": 59997,
+      "sid": 60003,
       "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bu",
       "status": "unstable",
-      "sid": 59996,
+      "sid": 60002,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bv",
       "status": "unstable",
-      "sid": 59995,
+      "sid": 60001,
       "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/bver",
       "status": "unstable",
-      "sid": 59999,
+      "sid": 60005,
       "type": "Integer"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/n",
       "status": "unstable",
-      "sid": 60000,
+      "sid": 60006,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/s",
       "status": "unstable",
-      "sid": 60005,
+      "sid": 60011,
       "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/t",
       "status": "unstable",
-      "sid": 60006,
+      "sid": 60012,
       "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/u",
       "status": "unstable",
-      "sid": 60001,
+      "sid": 60007,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/ut",
       "status": "unstable",
-      "sid": 60007,
+      "sid": 60013,
       "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/v",
       "status": "unstable",
-      "sid": 60002,
+      "sid": 60008,
       "type": "Number"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/vb",
       "status": "unstable",
-      "sid": 60004,
+      "sid": 60010,
       "type": "boolean"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/vd",
       "status": "unstable",
-      "sid": 60008,
+      "sid": 60014,
       "type": "string"
     },
     {
       "namespace": "data",
       "identifier": "/senml:e/vs",
       "status": "unstable",
-      "sid": 60003,
+      "sid": 60009,
       "type": "string"
     }
   ],
