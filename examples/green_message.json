@@ -1,0 +1,11 @@
+{
+    "energy-saving": {
+      "device": [
+        {
+          "device-id": "router-01",
+          "metrics": {
+            "power-consumption": 125.50,
+            "energy-saving-mode": "active",
+            "temperature": 45.3
+          }
+  }]}}

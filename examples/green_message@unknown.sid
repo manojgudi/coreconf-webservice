@@ -1,0 +1,53 @@
+
+{
+  "assignment-range": [
+    {
+      "entry-point": 60000,
+      "size": 100
+    }
+  ],
+  "module-name": "energy-saving",
+  "module-revision": "unknown",
+  "item": [
+    {
+      "namespace": "module",
+      "identifier": "energy-saving",
+      "sid": 60016
+    },
+    {
+      "namespace": "data",
+      "identifier": "/energy-saving:energy-saving",
+      "sid": 60006
+    },
+    {
+      "namespace": "data",
+      "identifier": "/energy-saving:energy-saving/device",
+      "sid": 60004
+    },
+    {
+      "namespace": "data",
+      "identifier": "/energy-saving:energy-saving/device/device-id",
+      "sid": 60000
+    },
+    {
+      "namespace": "data",
+      "identifier": "/energy-saving:energy-saving/device/metrics",
+      "sid": 60003
+    },
+    {
+      "namespace": "data",
+      "identifier": "/energy-saving:energy-saving/device/metrics/power-consumption",
+      "sid": 60002
+    },
+    {
+      "namespace": "data",
+      "identifier": "/energy-saving:energy-saving/device/metrics/energy-saving-mode",
+      "sid": 60001
+    },
+    {
+      "namespace": "data",
+      "identifier": "/energy-saving:energy-saving/device/metrics/temperature",
+      "sid": 60005
+    }
+  ]
+}
