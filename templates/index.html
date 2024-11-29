@@ -45,12 +45,13 @@
         </header>
         <form method="POST" action="{{ url_for('index') }}">
             <div class="input-container">
-                <textarea name="input1" placeholder="Paste your SID here.."
+                <textarea name="input1" placeholder="Paste your SID here OR keep it blank.."
                     class="input-box">{{sid_text_raw}}</textarea>
                 <textarea name="input2" placeholder="Paste your Data instance here.."
                     class="input-box">{{data_text_raw}}</textarea>
             </div>
             <button type="submit" class="submit-btn">Transform</button>
+            
         </form>
         <a href="{{ url_for('senmlExample') }}">
             <p class="example-text"> SenML Example</p>
@@ -58,6 +59,10 @@
         <a href="{{ url_for('camExample') }}">
             <p class="example-text"> CAM (ETSI) Example</p>
         </a>
+        <a href="{{ url_for('greenExample') }}">
+            <p class="example-text"> GREEN-WG message example</p>
+        </a>
+        
 
 
         {% if output_text %}

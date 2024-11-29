@@ -6,12 +6,15 @@ import random
 import os
 import cbor2
 
+import sidGeneration
+
 app = Flask(__name__)
 
 senmlSIDFile = "examples/senml@unknown.sid"
 senmlDataFile = "examples/senml_data.json"
 camSIDFile = "examples/cam@unknown.sid"
 camDataFile = "examples/cam_yogoko_message.json"
+greenDataFile = "examples/green_message.json"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -21,19 +24,29 @@ def index():
         sidTextRaw = request.form['input1']
         dataTextRaw = request.form['input2']
         outputText = sidTextRaw + " " + dataTextRaw
+        dataJSON = None
 
-              # Validate if sidTextRaw is a valid JSON string
-        try:
-            sidJSON = json.loads(sidTextRaw)
-        except json.JSONDecodeError:
-            # If sidTextRaw is not a valid JSON, handle the error (e.g., display an error message)
-            errMessage = "Error: SID content is not a valid JSON."
-
+        # Validate message payload
         try:
             dataJSON = json.loads(dataTextRaw)
         except json.JSONDecodeError:
             # If dataTextRaw is not a valid JSON, handle the error (e.g., display an error message)
             errMessage = "Error: Data instance is not a valid JSON."
+
+        # if sidTextRaw, then best effort to build SID
+        if len(sidTextRaw) < 5 and dataJSON:
+            # Guess identifiers for dataJSON
+            sidIdentifiers = sidGeneration.guessIdentifiers(dataJSON)
+            sidJSON = sidGeneration.generateSIDFile(sidIdentifiers, 60000, 1000, "generic-module")
+            # Overwrite the blank sidTextRaw so the generated SIDs are visible to the user
+            sidTextRaw = json.dumps(sidJSON, indent=2)
+        else:
+            # Validate if sidTextRaw is a valid JSON string
+            try:
+                sidJSON = json.loads(sidTextRaw)
+            except json.JSONDecodeError:
+                # If sidTextRaw is not a valid JSON, handle the error (e.g., display an error message)
+                errMessage = "Error: SID content is not a valid JSON."
 
         if errMessage:
             return render_template('index.html', output_text=errMessage)
@@ -57,6 +70,8 @@ def index():
             hexText = coreconfByteString.hex()
         except:
             errMessage = "Error: CORECONF conversion failed."
+            import traceback
+            traceback.print_exc()
         finally:
             # Delete the temporary files
             os.remove(sidFileName)
@@ -101,6 +116,22 @@ def camExample():
         dataTextRaw = f.read()
 
     return render_template('index.html', sid_text_raw=camTextRaw, data_text_raw=dataTextRaw)
+
+
+@app.route('/green_example', methods=['GET'])
+def greenExample():
+    # Read the example files and return the content as sid_text_raw and data_text_raw
+    greenTextRaw = ""
+    dataTextRaw= "Unable to read GREEN-WG Data file."
+
+    with open(greenDataFile, 'r') as f:
+        dataTextRaw = f.read()
+
+    return render_template('index.html', sid_text_raw=greenTextRaw, data_text_raw=dataTextRaw)
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
