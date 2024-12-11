@@ -105,13 +105,6 @@
             });
             // Scroll the result into view after submission
             document.querySelector('.result').scrollIntoView({ behavior: 'smooth' });
-           
-        
-            document.getElementById("coreconf-input").addEventListener("reset", (e) => {
-                // Scroll the result into view after submission
-                document.getElementsByName("input1")[0].value = "";
-            });
-
          
 
         </script>
@@ -124,7 +117,7 @@
         </div>
         <p align="left">JSON size: <b>{{json_length}} B </b>| CORECONF size: <b> {{hex_length}} B </b> |  Compressed: <b> &asymp; {{compressed_percent}}%</b></p>
         {% endif %}
-        <br><br><br>
+        <br>
         <footer>
             <p>Powered using <a href="https://github.com/alex-fddz/pycoreconf" target="_blank">pycoreconf</a> | <a
                     href="https://core-wg.github.io/comi/draft-ietf-core-comi.html" target="_blank">What is
