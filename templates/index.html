@@ -11,6 +11,13 @@
     <!-- Highlight.js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
 
+    <script>
+         function clearSID() {
+                document.getElementsByName("input1")[0].value = "";
+            }
+
+    </script>
+
     <style>
         /* Custom CSS for CBOR-like highlighting */
         .highlight .string {
@@ -43,15 +50,22 @@
         <header>
             <h1>Transform To CORECONF</h1>
         </header>
-        <form method="POST" action="{{ url_for('index') }}">
+        <form id="coreconf-input" method="POST" action="{{ url_for('index') }}">
             <div class="input-container">
                 <textarea name="input1" placeholder="Paste your SID here OR keep it blank.."
                     class="input-box">{{sid_text_raw}}</textarea>
                 <textarea name="input2" placeholder="Paste your Data instance here.."
                     class="input-box">{{data_text_raw}}</textarea>
             </div>
+            <div class="input-params">
+                <textarea name="input3" placeholder="SID Entry range"
+                class="input-params-box">{{sid_start_range}}</textarea>
+            </div>
+            <hr class="rounded">
+            <div class="button-container">
             <button type="submit" class="submit-btn">Transform</button>
-            
+            <button type="button" onclick="clearSID()" class="submit-btn">Clear SID</button>
+            </div>
         </form>
         <a href="{{ url_for('senmlExample') }}">
             <p class="example-text"> SenML Example</p>
@@ -72,6 +86,8 @@
         </div>
 
         <script>
+
+           
             // Highlight JSON syntax
             // Convert JSON-like data to CBOR-like highlighting
             document.addEventListener('DOMContentLoaded', (event) => {
@@ -89,6 +105,15 @@
             });
             // Scroll the result into view after submission
             document.querySelector('.result').scrollIntoView({ behavior: 'smooth' });
+           
+        
+            document.getElementById("coreconf-input").addEventListener("reset", (e) => {
+                // Scroll the result into view after submission
+                document.getElementsByName("input1")[0].value = "";
+            });
+
+         
+
         </script>
         {% endif %}
 

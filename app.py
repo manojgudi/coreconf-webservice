@@ -23,6 +23,10 @@ def index():
     if request.method == 'POST':
         sidTextRaw = request.form['input1']
         dataTextRaw = request.form['input2']
+        sidStartRangeRaw = request.form['input3']
+        if sidStartRangeRaw.isdigit:
+            sidStartRange = int(sidStartRangeRaw)
+
         outputText = sidTextRaw + " " + dataTextRaw
         dataJSON = None
 
@@ -37,7 +41,7 @@ def index():
         if len(sidTextRaw) < 5 and dataJSON:
             # Guess identifiers for dataJSON
             sidIdentifiers = sidGeneration.guessIdentifiers(dataJSON)
-            sidJSON = sidGeneration.generateSIDFile(sidIdentifiers, 60000, 1000, "generic-module")
+            sidJSON = sidGeneration.generateSIDFile(sidIdentifiers, sidStartRange, 1000, "generic-module")
             # Overwrite the blank sidTextRaw so the generated SIDs are visible to the user
             sidTextRaw = json.dumps(sidJSON, indent=2)
         else:
@@ -84,7 +88,8 @@ def index():
         hexSize  = int(len(hexText)/2)
         compressedPercent = round(100 - (hexSize/jsonSize)*100, 2)
         return render_template('index.html', output_text=outputText, hex_text=hexText, json_length=jsonSize, hex_length=hexSize, 
-                               compressed_percent = compressedPercent, sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw)
+                               compressed_percent = compressedPercent, sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw,
+                               sid_start_range=sidStartRange)
     
     # If it's a GET request (e.g., page refresh), render with empty outputText
     return render_template('index.html')
@@ -95,13 +100,14 @@ def senmlExample():
    
     sidTextRaw = "Unable to read SID file."
     dataTextRaw= "Unable to read SenML Data file."
+    sidStartRange = 60000 #default 
 
     with open(senmlSIDFile, 'r') as f:
         sidTextRaw = f.read()
     with open(senmlDataFile, 'r') as f:
         dataTextRaw = f.read()
 
-    return render_template('index.html', sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw)
+    return render_template('index.html', sid_text_raw=sidTextRaw, data_text_raw=dataTextRaw, sid_start_range=sidStartRange)
 
 @app.route('/cam_example', methods=['GET'])
 def camExample():
@@ -109,13 +115,14 @@ def camExample():
    
     camTextRaw = "Unable to read CAM file."
     dataTextRaw= "Unable to read CAM Data file."
+    sidStartRange = 60000 #default 
 
     with open(camSIDFile, 'r') as f:
         camTextRaw = f.read()
     with open(camDataFile, 'r') as f:
         dataTextRaw = f.read()
 
-    return render_template('index.html', sid_text_raw=camTextRaw, data_text_raw=dataTextRaw)
+    return render_template('index.html', sid_text_raw=camTextRaw, data_text_raw=dataTextRaw, sid_start_range=sidStartRange )
 
 
 @app.route('/green_example', methods=['GET'])
@@ -123,11 +130,13 @@ def greenExample():
     # Read the example files and return the content as sid_text_raw and data_text_raw
     greenTextRaw = ""
     dataTextRaw= "Unable to read GREEN-WG Data file."
+    sidStartRange = 60000 #default 
+
 
     with open(greenDataFile, 'r') as f:
         dataTextRaw = f.read()
 
-    return render_template('index.html', sid_text_raw=greenTextRaw, data_text_raw=dataTextRaw)
+    return render_template('index.html', sid_text_raw=greenTextRaw, data_text_raw=dataTextRaw, sid_start_range=sidStartRange)
 
 
 

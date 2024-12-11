@@ -26,7 +26,6 @@ form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
 }
 
 .input-container {
@@ -34,18 +33,51 @@ form {
     width: 100%;
     gap: 20px;
     height: 580px;
-    
+    align-items: center;
+
 }
 
+.button-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.input-params{
+    display:block;
+    width: 10%;
+    height: 20px;
+    align-items: normal;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.input-params-box{
+    height: 40px;
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+
+}
 .input-box {
     width: 100%;
     height: 550px;
-    padding: 10px;
+    padding: 5px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
 }
+
+/* Rounded border */
+hr.rounded {
+    width: 100%;
+    border:none;
+  }
 
 .submit-btn {
     padding: 10px 20px;
@@ -53,8 +85,8 @@ form {
     color: white;
     background-color: #FF7F50; /* Coral color */
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    width:  inherit;
 }
 
 .submit-btn:hover {
