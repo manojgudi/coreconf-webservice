@@ -8,6 +8,9 @@ import cbor2
 
 import sidGeneration
 
+
+DEFAULT_SID_START_RANGE = 60000
+
 app = Flask(__name__)
 
 senmlSIDFile = "examples/senml@unknown.sid"
@@ -24,8 +27,10 @@ def index():
         sidTextRaw = request.form['input1']
         dataTextRaw = request.form['input2']
         sidStartRangeRaw = request.form['input3']
-        if sidStartRangeRaw.isdigit:
+        if sidStartRangeRaw.isdigit():
             sidStartRange = int(sidStartRangeRaw)
+        else:
+            sidStartRange = 60000
 
         outputText = sidTextRaw + " " + dataTextRaw
         dataJSON = None
